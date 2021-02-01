@@ -1,0 +1,55 @@
+#The list of packages to be loaded
+list.of.packages <- c("RJSONIO","plyr")
+
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
+lapply(list.of.packages,function(x){library(x,character.only=TRUE)})
+
+#Helper functions
+
+# Convert a string to a numeric
+
+getNum <- function(x) {
+  as.numeric(as.character(x))
+}
+
+# Test whether a driver code exists and if so, return it
+
+driverCodeExists <- function(x) {
+  if (is.null(x$code))
+  return('')
+  else
+  return(x$code)
+}
+
+# Generate time in seconds from min:seconds format
+
+timeInS <- function(tStr) {
+  if (is.na(tStr)) ts = NA
+  else {
+    x = unlist(strsplit(tStr,':'))
+    if (length(x) == 1) tS = getNum(x[1])
+    else if (length(x) == 2) tS = 60*getNum(x[1]) + getNum(x[2])
+    else if (length(x) == 3) tS = 3600*getNum(x[1]) + 60*getNum(x[2]) + getNum(x[3])
+    else tS = NA
+  }
+  tS
+}
+
+API_PATH="http://ergast.com/api/f1/"
+
+# URL Builder Functions
+
+# Get URL for races by year
+
+getRacesDataByYear_URL <- function(year,format = 'json'){
+  paste(c,year,'.',format,sep = '')
+}
+
+# Get URL for pits by race-and-year
+
+getPitsbyYearRace_URL <- function(year,raceNum,format = 'json'){
+  paste(API_PATH,year,'/',.raceNum,'/laps.',format,'?limit=1000','&offset=',offset,sep = '')
+}
+
+#' Get URL for laps by race-and-year-and-driver
