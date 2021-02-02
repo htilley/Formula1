@@ -90,7 +90,7 @@ getResultsbyYearRace_URL <- function(year,raceNum,format = 'json'){
 # Get URL for Drivers by Year
 
 getDriversbyYear_URL <- function(year,format = 'json'){
-  paste(API_PATH,year,'/drivers.',format,'?limit=2500',sep = ''))
+  paste(API_PATH,year,'/drivers.',format,'?limit=2500',sep = '')
 }
 
 # Get URL for Results by Year and Driver
@@ -253,7 +253,7 @@ driversData <- function(year){
 }
 
 
-#' Parse dataframe containing qualifying results
+# Parse dataframe containing qualifying results
 
 qualResultsParse <- function(url){
   drj = getJSONbyURL(url)
