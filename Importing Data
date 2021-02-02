@@ -1,5 +1,7 @@
 #The list of packages to be loaded
+
 list.of.packages <- c("RJSONIO","plyr")
+
 
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
@@ -52,4 +54,17 @@ getPitsbyYearRace_URL <- function(year,raceNum,format = 'json'){
   paste(API_PATH,year,'/',.raceNum,'/laps.',format,'?limit=1000','&offset=',offset,sep = '')
 }
 
-#' Get URL for laps by race-and-year-and-driver
+
+# Get URL for Laps by race-and-year
+
+getLapsbyYearRace_URL <- function(year,raceNum,format = 'json',offset = 0){
+  paste(API_PATH,year,'/',raceNum,'/laps',format,'?limit=1000','&offset=',offset,sep = '')
+}
+
+# Get URL for Laps by race-and-year-and-driver
+
+getLapsbyYearRaceDriver_URL <- function(year,raceNum,driverId,format = 'json'){
+  paste(API_PATH,year,'/',raceNum,'/drivers/',driverId,'/laps.',format,'?limit=1000',sep = '')
+}
+
+# Get URL for qualifying
