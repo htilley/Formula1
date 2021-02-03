@@ -361,7 +361,7 @@ driverResults <- function(year,driverRef=NA){
 # Get dataframe for races by year
 
 resultsData <- function(year,raceNum){
-  rrj = getJSONbyURL(getRaceResultsByYearRace.URL(year,raceNum))
+  rrj = getJSONbyURL(getResultsbyYearRace_URL(year,raceNum))
   rrd = rrj$MRData$RaceTable$Races[[1]]$Results
 
   race_results <- data.frame(
@@ -499,9 +499,15 @@ hack3 <- function(c){
   else NA
 }
 
-# driverIds.df = drivers.df[,c('driverId','code')]
-
 driversData(2020) %>%
   select(driverId,code) -> driver_codes
 
-lap_data_race(2020,1)
+lap_data_race(2020,1) %>%
+  merge(driver_codes,by = 'driverId') -> Lap_Info_R1
+
+resultsData(2020,1) %>%
+  merge(driver_codes,by = 'driverId') -> results
+
+ggplot(results,aes(x=fastlaprank,y=fastlaptime)) + geom_text(aes(label=code))
+
+ggplot(results,aes(x=fastlaprank,y=fastlaptime)) + geom_text(aes(label=constructorId,color=constructorId))
