@@ -1,6 +1,6 @@
 #The list of packages to be loaded
 
-list.of.packages <- c("RJSONIO","plyr")
+list.of.packages <- c("RJSONIO","plyr",'tidyverse')
 
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
@@ -26,7 +26,7 @@ driverCodeExists <- function(x) {
 # Generate time in seconds from min:seconds format
 
 timeInS <- function(tStr) {
-  if (is.na(tStr)) tS = NA
+  if (is.na(tStr)) ts = NA
   else {
     x = unlist(strsplit(tStr,':'))
     if (length(x) == 1) tS = getNum(x[1])
@@ -44,13 +44,13 @@ API_PATH <- "http://ergast.com/api/f1/"
 # Get URL for Races by Year
 
 getRacesByYear_URL <- function(year,format = 'json'){
-  paste(API_PATH,year,'.',format,sep = '')
+  paste(c,year,'.',format,sep = '')
 }
 
 # Get URL for Pits by Race-and-Year
 
 getPitsbyYearRace_URL <- function(year,raceNum,format = 'json'){
-  paste(API_PATH,year,'/',raceNum,'/pitstops.',format,'?limit=1000',sep = '')
+  paste(API_PATH,year,'/',.raceNum,'/pitstops.',format,'?limit=1000',sep = '')
 }
 
 # Get URL for Laps by Race-and-Year
@@ -77,8 +77,7 @@ getQual_URL <- function(year = NA,raceNum = NA,driverRef = NA,constructorRef = N
   if(!is.na(driverRef))
   url = paste(url,'drivers/',driverRef,'/',sep = '')
   if(!is.na(constructorRef))
-  url = paste(url,'constructors/',constructorRef,'/',sep = '')
-  url = paste(url,'qualifying.',format,'?limit=2500',sep = '')
+  url = paste(url,'qualifying.',format,'?limit=2500',sep='')
   url
 }
 
@@ -131,7 +130,8 @@ formatlapdata <- function(rd){
                                 driverId = rd[[i]]$Timings[[j]]$driverId,
                                 position = as.integer(as.character(rd[[i]]$Timings[[j]]$position)),
                                 strtime = rd[[i]]$Timings[[j]]$time,
-                                rawtime = timeInS(rd[[i]]$Timings[[j]]$time)))
+                                rawtime = timeInS(rd[[i]]$Timings[[j]]$time)
+                              ))
                             }
                           }
 
@@ -194,7 +194,8 @@ formatPitsData <- function(rd_pits){
       rawtime=timeInS(pd[[i]]$time),
       strduration = pd[[i]]$duration,
       rawduration = timeInS(pd[[i]]$duration),
-      milliseconds = 1000 * timeInS(pd[[i]]$duration)))
+      milliseconds = 1000 * timeInS(pd[[i]]$duration)
+    ))
   }
   pits_data
 }
@@ -221,7 +222,8 @@ racesData <- function(year){
     races_data = rbind(races_data,data.frame(
       round = races[[i]]$round,
       racename = races[[i]]$raceName,
-      circuitId = races[[i]]$Circuit$circuitId))
+      circuitId = races[[i]]$Circuit$circuitId
+    ))
   }
   races_data
 }
@@ -244,7 +246,8 @@ driversData <- function(year){
       driverId = drivers[[i]]['driverId'],
       name = drivers[[i]]['familyName'],
       code = drivers[[i]]['code'],
-      permNumber = permNumber))
+      permNumber = permNumber
+    ))
   }
   drivers_data
 }
@@ -291,7 +294,8 @@ qualResultsParse <- function(url){
         Q2_time = timeInS(Q2),
         Q3_time = timeInS(Q3),
         season = season,
-        round = round))
+        round = round
+      ))
     }
   }
 
@@ -316,7 +320,7 @@ qualResults <- function(year = NA,raceNum = NA,driverRef = NA,constructorRef = N
 # Get dataframe containing results by driver
 
 driverResults <- function(year,driverRef=NA){
-  drj = getJSONbyURL(getResultsbyYearDriver_URL(year,driverRef))
+  drj = getJSONbyURL(getDriversbyYear_URL(year,driverRef))
   drdr = drj$MRData$RaceTable$Races
 
   driver_results <- data.frame(
@@ -348,7 +352,8 @@ driverResults <- function(year,driverRef=NA){
       points = as.integer(drd$points),
       status = as.character(drd$status),
       season = season,
-      round = round))
+      round = round
+    ))
   }
   driver_results
 }
@@ -356,7 +361,7 @@ driverResults <- function(year,driverRef=NA){
 # Get dataframe for races by year
 
 resultsData <- function(year,raceNum){
-  rrj = getJSONbyURL(getResultsbyYearRace_URL(year,raceNum))
+  rrj = getJSONbyURL(getRaceResultsByYearRace.URL(year,raceNum))
   rrd = rrj$MRData$RaceTable$Races[[1]]$Results
 
   race_results <- data.frame(
@@ -383,7 +388,8 @@ resultsData <- function(year,raceNum){
       status = rrd[[i]]$status,
       fastlapnum = hack1(rrd[[i]]),
       fastlaptime = hack2(rrd[[i]]),
-      fastlaprank = hack3(rrd[[i]])))
+      fastlaprank = hack3(rrd[[i]])
+    ))
   }
   race_results$driverId = reorder(race_results$driverId, race_results$carNum)
   race_results
@@ -410,7 +416,7 @@ driverStandings <- function(dURL){
   for (i in 1:length(drd)){
     for (j in 1:length(drd[[i]]$DriverStandings))
 
-      driverStandings_data = rbind(driverStandings_data,data.frame(
+      driverStandings_data = rbind(driverStandings.data,data.frame(
         year = getNum(drd[[i]]$season),
         driverId = drd[[i]]$DriverStandings[[j]]$Driver$driverId,
         code = driverCodeExists(drd[[i]]$DriverStandings[[j]]$Driver),
@@ -453,7 +459,7 @@ parse_constructorStandings <- function(dURL){
 
     for (j in 1:length(constructorStandings)){
       constructorStanding = constructorStandings[[j]]
-      constructorStandings_data = rbind(constructorStandings_data,data.frame(
+      constructorStandings_data = rbind(constructorStandings.data,data.frame(
         year = getNum(drd[[i]]$season),
         constructorId = constructorStanding$Constructor$constructorId,
         pos = getNum(constructorStanding$position),
@@ -468,7 +474,7 @@ parse_constructorStandings <- function(dURL){
 
 # Get dataframe for constructor final standings by year or race
 
-constructorStandings <- function(year,race = ''){
+constructorStandings = function(year,race = ''){
   if (race == '')
     dURL = paste(API_PATH,year,'/constructorStandings.json',sep = '')
   else
@@ -492,3 +498,10 @@ hack3 <- function(c){
     getNum(c$FastestLap$rank)
   else NA
 }
+
+# driverIds.df = drivers.df[,c('driverId','code')]
+
+driversData(2020) %>%
+  select(driverId,code) -> driver_codes
+
+lap_data_race(2020,1)
