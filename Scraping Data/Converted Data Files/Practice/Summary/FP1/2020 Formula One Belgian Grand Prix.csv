@@ -1,0 +1,21 @@
+"","Pos","No","Driver","Nat","Team","Laps","Time","Gap","Interval","Kph","Best","Lap"
+"1",1,77,"Valtteri Bottas","Finland","Mercedes-AMG Petronas Formula One Team",18,"1:44.493","","",241.302,NA,NA
+"2",2,44,"Lewis Hamilton","Great Britain","Mercedes-AMG Petronas Formula One Team",17,"1:44.562","+ 0.069","+ 0.069",241.143,NA,NA
+"3",3,33,"Max Verstappen","Netherlands","Aston Martin Red Bull Racing",20,"1:44.574","+ 0.081","+ 0.012",241.115,NA,NA
+"4",4,11,"Sergio Pérez","Mexico","BWT Racing Point F1 Team",22,"1:44.629","+ 0.136","+ 0.055",240.988,NA,NA
+"5",5,18,"Lance Stroll","Canada","BWT Racing Point F1 Team",22,"1:44.868","+ 0.375","+ 0.239",240.439,NA,NA
+"6",6,23,"Alexander Albon","Thailand","Aston Martin Red Bull Racing",22,"1:45.049","+ 0.556","+ 0.181",240.025,NA,NA
+"7",7,31,"Esteban Ocon","France","Renault DP World F1 Team",20,"1:45.099","+ 0.606","+ 0.050",239.91,NA,NA
+"8",8,55,"Carlos Sainz","Spain","McLaren F1 Team",24,"1:45.222","+ 0.729","+ 0.123",239.63,NA,NA
+"9",9,3,"Daniel Ricciardo","Australia","Renault DP World F1 Team",21,"1:45.225","+ 0.732","+ 0.003",239.623,NA,NA
+"10",10,4,"Lando Norris","Great Britain","McLaren F1 Team",28,"1:45.274","+ 0.781","+ 0.049",239.512,NA,NA
+"11",11,26,"Daniil Kvyat","Russia","Scuderia AlphaTauri Honda",25,"1:45.447","+ 0.954","+ 0.173",239.119,NA,NA
+"12",12,10,"Pierre Gasly","France","Scuderia AlphaTauri Honda",17,"1:45.503","+ 1.010","+ 0.056",238.992,NA,NA
+"13",13,7,"Kimi Räikkönen","Finland","Alfa Romeo Racing ORLEN",19,"1:45.704","+ 1.211","+ 0.201",238.537,NA,NA
+"14",14,16,"Charles Leclerc","Monaco","Scuderia Ferrari",18,"1:45.759","+ 1.266","+ 0.055",238.413,NA,NA
+"15",15,5,"Sebastian Vettel","Germany","Scuderia Ferrari",15,"1:46.179","+ 1.686","+ 0.420",237.47,NA,NA
+"16",16,6,"Nicholas Latifi","Canada","Williams Racing",19,"1:46.488","+ 1.995","+ 0.309",236.781,NA,NA
+"17",17,63,"George Russell","Great Britain","Williams Racing",21,"1:46.570","+ 2.077","+ 0.082",236.599,NA,NA
+"18",18,20,"Kevin Magnussen","Denmark","Haas F1 Team",1,"","","",NA,NA,NA
+"19",19,8,"Romain Grosjean","France","Haas F1 Team",2,"","","",NA,NA,NA
+"20",20,99,"Antonio Giovinazzi","Italy","Alfa Romeo Racing ORLEN",2,"","","",NA,NA,NA

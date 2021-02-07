@@ -1,0 +1,20 @@
+"","Pos","No","Driver","Nat","Team","Laps","Time","Gap","Interval","Kph","Best","Lap"
+"1",1,77,"Valtteri Bottas","Finland","Mercedes-AMG Petronas Formula One Team",25,"1:26.225","","",214.935,NA,NA
+"2",2,44,"Lewis Hamilton","Great Britain","Mercedes-AMG Petronas Formula One Team",27,"1:26.361","+ 0.136","+ 0.136",214.596,NA,NA
+"3",3,16,"Charles Leclerc","Monaco","Scuderia Ferrari",25,"1:26.681","+ 0.456","+ 0.320",213.804,NA,NA
+"4",4,33,"Max Verstappen","Netherlands","Aston Martin Red Bull Racing",24,"1:26.896","+ 0.671","+ 0.215",213.275,NA,NA
+"5",5,5,"Sebastian Vettel","Germany","Scuderia Ferrari",25,"1:27.038","+ 0.813","+ 0.142",212.927,NA,NA
+"6",6,4,"Lando Norris","Great Britain","McLaren F1 Team",29,"1:27.167","+ 0.942","+ 0.129",212.612,NA,NA
+"7",7,11,"Sergio Pérez","Mexico","BWT Racing Point F1 Team",25,"1:27.245","+ 1.020","+ 0.078",212.422,NA,NA
+"8",8,3,"Daniel Ricciardo","Australia","Renault DP World F1 Team",23,"1:27.392","+ 1.167","+ 0.147",212.065,NA,NA
+"9",9,23,"Alexander Albon","Thailand","Aston Martin Red Bull Racing",23,"1:27.449","+ 1.224","+ 0.057",211.926,NA,NA
+"10",10,10,"Pierre Gasly","France","Scuderia AlphaTauri Honda",28,"1:27.528","+ 1.303","+ 0.079",211.735,NA,NA
+"11",11,31,"Esteban Ocon","France","Renault DP World F1 Team",27,"1:27.634","+ 1.409","+ 0.106",211.479,NA,NA
+"12",12,26,"Daniil Kvyat","Russia","Scuderia AlphaTauri Honda",26,"1:27.795","+ 1.570","+ 0.161",211.091,NA,NA
+"13",13,55,"Carlos Sainz","Spain","McLaren F1 Team",29,"1:27.924","+ 1.699","+ 0.129",210.782,NA,NA
+"14",14,7,"Kimi Räikkönen","Finland","Alfa Romeo Racing ORLEN",25,"1:27.956","+ 1.731","+ 0.032",210.705,NA,NA
+"15",15,8,"Romain Grosjean","France","Haas F1 Team",27,"1:28.115","+ 1.890","+ 0.159",210.325,NA,NA
+"16",16,20,"Kevin Magnussen","Denmark","Haas F1 Team",27,"1:28.293","+ 2.068","+ 0.178",209.901,NA,NA
+"17",17,63,"George Russell","Great Britain","Williams Racing",30,"1:28.343","+ 2.118","+ 0.050",209.782,NA,NA
+"18",18,99,"Antonio Giovinazzi","Italy","Alfa Romeo Racing ORLEN",25,"1:28.370","+ 2.145","+ 0.027",209.718,NA,NA
+"19",19,6,"Nicholas Latifi","Canada","Williams Racing",26,"1:28.941","+ 2.716","+ 0.571",208.371,NA,NA

@@ -1,0 +1,21 @@
+"","Pos","No","Driver","Nat","Team","Laps","Time","Gap","Interval","Kph","Best","Lap"
+"1",1,63,"George Russell","Great Britain","Mercedes-AMG Petronas Formula One Team",48,54.713,"","",233.121,NA,NA
+"2",2,33,"Max Verstappen","Netherlands","Aston Martin Red Bull Racing",43,54.841,"+ 0.128","+ 0.128",232.577,NA,NA
+"3",3,11,"Sergio Pérez","Mexico","BWT Racing Point F1 Team",52,54.866,"+ 0.153","+ 0.025",232.471,NA,NA
+"4",4,31,"Esteban Ocon","France","Renault DP World F1 Team",50,54.94,"+ 0.227","+ 0.074",232.158,NA,NA
+"5",5,23,"Alexander Albon","Thailand","Aston Martin Red Bull Racing",42,55.036,"+ 0.323","+ 0.096",231.753,NA,NA
+"6",6,26,"Daniil Kvyat","Russia","Scuderia AlphaTauri Honda",58,55.068,"+ 0.355","+ 0.032",231.619,NA,NA
+"7",7,18,"Lance Stroll","Canada","BWT Racing Point F1 Team",44,55.104,"+ 0.391","+ 0.036",231.467,NA,NA
+"8",8,3,"Daniel Ricciardo","Australia","Renault DP World F1 Team",47,55.124,"+ 0.411","+ 0.020",231.383,NA,NA
+"9",9,10,"Pierre Gasly","France","Scuderia AlphaTauri Honda",48,55.133,"+ 0.420","+ 0.009",231.346,NA,NA
+"10",10,55,"Carlos Sainz","Spain","McLaren F1 Team",39,55.258,"+ 0.545","+ 0.125",230.822,NA,NA
+"11",11,77,"Valtteri Bottas","Finland","Mercedes-AMG Petronas Formula One Team",52,55.321,"+ 0.608","+ 0.063",230.559,NA,NA
+"12",12,7,"Kimi Räikkönen","Finland","Alfa Romeo Racing ORLEN",54,55.484,"+ 0.771","+ 0.163",229.882,NA,NA
+"13",13,99,"Antonio Giovinazzi","Italy","Alfa Romeo Racing ORLEN",57,55.533,"+ 0.820","+ 0.049",229.679,NA,NA
+"14",14,20,"Kevin Magnussen","Denmark","Haas F1 Team",49,55.738,"+ 1.025","+ 0.205",228.834,NA,NA
+"15",15,6,"Nicholas Latifi","Canada","Williams Racing",52,55.784,"+ 1.071","+ 0.046",228.646,NA,NA
+"16",16,5,"Sebastian Vettel","Germany","Scuderia Ferrari",43,55.83,"+ 1.117","+ 0.046",228.457,NA,NA
+"17",17,4,"Lando Norris","Great Britain","McLaren F1 Team",14,56.031,"+ 1.318","+ 0.201",227.638,NA,NA
+"18",18,51,"Pietro Fittipaldi","Brazil","Haas F1 Team",56,56.11,"+ 1.397","+ 0.079",227.317,NA,NA
+"19",19,89,"Jack Aitken","Great Britain","Williams Racing",58,56.26,"+ 1.547","+ 0.150",226.711,NA,NA
+"20",20,16,"Charles Leclerc","Monaco","Scuderia Ferrari",2,NA,"","",NA,NA,NA
